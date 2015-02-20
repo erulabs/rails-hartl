@@ -25,9 +25,6 @@ SampleApp::Application.configure do
   # # Optional, Rails 4 defaults to true in development and false in production
   config.autoflush_log = true
 
-  # # Optional, use a URI to configure. Useful on Heroku
-  config.logstash.uri = ENV['LOGSTASH_URI']
-
   # Optional, defaults to '0.0.0.0'
   config.logstash.host = '10.209.164.14'
 
