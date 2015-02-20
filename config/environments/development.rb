@@ -19,6 +19,24 @@ SampleApp::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  # Optional, Rails sets the default to :info
+  config.log_level = :debug
+
+  # # Optional, Rails 4 defaults to true in development and false in production
+  config.autoflush_log = true
+
+  # # Optional, use a URI to configure. Useful on Heroku
+  config.logstash.uri = ENV['LOGSTASH_URI']
+
+  # Optional, defaults to '0.0.0.0'
+  config.logstash.host = '10.209.164.14'
+
+  # # Required, the port to connect to
+  config.logstash.port = 5228
+
+  # # Required
+  config.logstash.type = :tcp
+
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
